@@ -1,0 +1,17 @@
+variable "project_name"         { type = string }
+variable "environment"          { type = string }
+variable "vpc_id"               { type = string }
+variable "private_subnet_ids"   { type = list(string) }
+variable "sg_id"                { type = string }
+variable "instance_profile"     { type = string }
+variable "ami_id"               { type = string }
+variable "instance_type"        { type = string }
+variable "key_pair_name"        { type = string }
+variable "alb_target_group_arn" { type = string }
+variable "min_size"             { type = number }
+variable "max_size"             { type = number }
+variable "desired_capacity"     { type = number }
+variable "scale_out_cron"       { type = string }
+variable "scale_in_cron"        { type = string }
+variable "s3_bucket_name"       { type = string }
+variable "log_group_name"       { type = string }

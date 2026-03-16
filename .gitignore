@@ -1,0 +1,30 @@
+# Terraform local state & cache
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+
+# Sensitive var files – never commit these
+*.tfvars
+!environments/dev.tfvars.example
+!environments/prod.tfvars.example
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Generated Lambda zip
+modules/lambda/*.zip
+modules/lambda/src/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
